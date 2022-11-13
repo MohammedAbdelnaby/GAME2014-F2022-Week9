@@ -18,6 +18,11 @@ public class PlayerMovement : MonoBehaviour
     public Animator animator;
     public PlayerAnimationState playerAnimationState;
 
+    [Header("Controls")]
+    public Joystick leftStick;
+    [Range(0.1f, 1.0f)]
+    public float verticalThreshHold;
+
     private Rigidbody2D rigidbody2D;
 
     // Start is called before the first frame update
@@ -25,6 +30,7 @@ public class PlayerMovement : MonoBehaviour
     {
         rigidbody2D = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        leftStick = (Application.isMobilePlatform) ? GameObject.Find("LeftStick").GetComponent<Joystick>() : null;
     }
 
     // Update is called once per frame
@@ -39,7 +45,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Move()
     {
-        float X = Input.GetAxisRaw("Horizontal");
+        float X = Input.GetAxisRaw("Horizontal") + ((Application.isMobilePlatform) ? leftStick.Horizontal : 0.0f);
         if (X != 0.0f)
         {
             Flip(X);
@@ -60,9 +66,9 @@ public class PlayerMovement : MonoBehaviour
 
     private void Jump()
     {
-        float Y = Input.GetAxis("Jump");
+        float Y = Input.GetAxis("Jump") + ((Application.isMobilePlatform) ? leftStick.Vertical : 0.0f);
 
-        if ((isGrounded) && (Y > 0.0f))
+        if ((isGrounded) && (Y > verticalThreshHold))
         {
             rigidbody2D.AddForce(Vector2.up * verticalForce, ForceMode2D.Impulse);
         }
