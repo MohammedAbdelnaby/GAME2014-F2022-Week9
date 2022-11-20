@@ -1,9 +1,9 @@
 {
     "m_SelectedDeviceId": "emulator-5554",
     "m_SelectedPackage": {
-        "deviceId": "",
-        "name": "",
-        "processId": 0,
+        "deviceId": "emulator-5554",
+        "name": "com.gbc.game2014f202210b",
+        "processId": 4736,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -12,6 +12,12 @@
             "deviceId": "emulator-5554",
             "name": "com.ldmnq.launcher3",
             "processId": 2352,
+            "exited": false
+        },
+        {
+            "deviceId": "emulator-5554",
+            "name": "com.gbc.game2014f202210b",
+            "processId": 4736,
             "exited": false
         }
     ],

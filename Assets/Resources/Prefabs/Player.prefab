@@ -35,7 +35,7 @@ Transform:
   m_Children:
   - {fileID: 8514067590891985822}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &8514067590711428526
 SpriteRenderer:
@@ -166,10 +166,12 @@ MonoBehaviour:
   groundRadius: 0.5
   groundLayerMask:
     serializedVersion: 2
-    m_Bits: 192
+    m_Bits: 448
   isGrounded: 0
   animator: {fileID: 0}
   playerAnimationState: 0
+  leftStick: {fileID: 0}
+  verticalThreshHold: 0.6
 --- !u!1 &8514067590891985823
 GameObject:
   m_ObjectHideFlags: 0
