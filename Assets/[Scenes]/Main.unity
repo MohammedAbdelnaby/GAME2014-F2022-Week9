@@ -5494,6 +5494,7 @@ GameObject:
   - component: {fileID: 1909124877}
   - component: {fileID: 1909124876}
   - component: {fileID: 1909124875}
+  - component: {fileID: 1909124879}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -5584,6 +5585,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1909124879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1909124874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d35f5ed98e1093a439b6c9fc647be8a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2120068476
 GameObject:
   m_ObjectHideFlags: 0
@@ -5647,7 +5660,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2426235606994648422, guid: 5f9cc212df73d1347a924914f64a80c7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 24.3
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 2426235606994648422, guid: 5f9cc212df73d1347a924914f64a80c7, type: 3}
       propertyPath: m_LocalPosition.y
@@ -5747,11 +5760,6 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: f381f95b4aebe6145b56729f4b6461c2, type: 3}
---- !u!1 &3388371984384025375 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2392896858670627194, guid: 5f9cc212df73d1347a924914f64a80c7, type: 3}
-  m_PrefabInstance: {fileID: 1022507734067419749}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3430358853541979907 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2426235606994648422, guid: 5f9cc212df73d1347a924914f64a80c7, type: 3}
@@ -5934,23 +5942,6 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 9040b6ec3fabadf4699e190ba86ab723, type: 3}
---- !u!114 &8984943948737752052
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3388371984384025375}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c98b604cd854a554293d858dfc9c5c64, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  direction: 1
-  horizontalDistance: 8
-  horizontalSpeed: 3
-  verticalDistance: 8
-  verticalSpeed: 3
 --- !u!1001 &9176426687912105053
 PrefabInstance:
   m_ObjectHideFlags: 0
