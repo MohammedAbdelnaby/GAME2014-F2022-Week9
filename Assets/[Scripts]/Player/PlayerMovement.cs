@@ -28,6 +28,7 @@ public class PlayerMovement : MonoBehaviour
     [Range(0.1f, 1.0f)]
     public float verticalThreshHold;
 
+    private SoundManager soundManager;
     private Rigidbody2D rigidbody2D;
 
     // Start is called before the first frame update
@@ -39,6 +40,7 @@ public class PlayerMovement : MonoBehaviour
         health = FindObjectOfType<PlayerHealth>().GetComponent<HealthBarController>();
         life = FindObjectOfType<LifeCounterController>();
         deathPlane = FindObjectOfType<DeathPlaneController>();
+        soundManager = FindObjectOfType<SoundManager>();
     }
 
     private void Update()
@@ -46,10 +48,11 @@ public class PlayerMovement : MonoBehaviour
         if (health.value <= 0)
         {
             life.LoseLife();
-            if (life.value <0)
+            if (life.value < 0)
             {
                 health.ResetHealthBar();
                 deathPlane.Respawn(this.gameObject);
+                soundManager.PlaySoundFX(Sound.DEATH, Channel.PLAYER_DEATH_FX);
             }
         }
     }
@@ -92,6 +95,7 @@ public class PlayerMovement : MonoBehaviour
         if ((isGrounded) && (Y > verticalThreshHold))
         {
             rigidbody2D.AddForce(Vector2.up * verticalForce, ForceMode2D.Impulse);
+            soundManager.PlaySoundFX(Sound.JUMP, Channel.PLAYER_SOUND_FX);
         }
     }
 
@@ -128,6 +132,7 @@ public class PlayerMovement : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemy"))
         {
             health.TakeDamage(20);
+            soundManager.PlaySoundFX(Sound.HURT, Channel.PLAYER_HURT_FX);
         }
     }
 }
