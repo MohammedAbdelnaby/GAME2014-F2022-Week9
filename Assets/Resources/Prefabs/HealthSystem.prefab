@@ -139,6 +139,8 @@ GameObject:
   - component: {fileID: 513570976498503482}
   - component: {fileID: 7070339420235741188}
   - component: {fileID: 1379280408064716920}
+  - component: {fileID: 908790937}
+  - component: {fileID: 1457055784727729902}
   m_Layer: 0
   m_Name: HealthSystem
   m_TagString: Untagged
@@ -153,7 +155,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5487103333059189648}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 50}
   m_LocalScale: {x: 0.028571429, y: 0.028571429, z: 0.028571429}
   m_ConstrainProportionsScale: 0
@@ -229,6 +231,35 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &908790937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5487103333059189648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68377160cdda764419b6d86998e7761c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target:
+    transform: {fileID: 0}
+    offset: {x: 0, y: 0.65}
+    x: 1
+    y: 1
+--- !u!114 &1457055784727729902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5487103333059189648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 812834813c751a1498e6b7896c8647e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5741830722768283277
 GameObject:
   m_ObjectHideFlags: 0
