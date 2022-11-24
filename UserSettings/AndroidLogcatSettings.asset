@@ -3,7 +3,7 @@
     "m_SelectedPackage": {
         "deviceId": "emulator-5554",
         "name": "com.gbc.game2014f202210b",
-        "processId": 4736,
+        "processId": 3766,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -18,6 +18,12 @@
             "deviceId": "emulator-5554",
             "name": "com.gbc.game2014f202210b",
             "processId": 4736,
+            "exited": false
+        },
+        {
+            "deviceId": "emulator-5554",
+            "name": "com.gbc.game2014f202210b",
+            "processId": 3766,
             "exited": false
         }
     ],
