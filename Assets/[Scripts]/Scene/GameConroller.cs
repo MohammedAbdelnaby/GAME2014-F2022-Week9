@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GameConroller : MonoBehaviour
 {
-
+    public Sound Music;
     public GameObject onScreenControls;
 
     // Update is called once per frame
@@ -12,7 +12,10 @@ public class GameConroller : MonoBehaviour
     {
         onScreenControls = GameObject.Find("OnScreenControls");
 
+
         onScreenControls.SetActive(Application.isMobilePlatform);
+
+        FindObjectOfType<SoundManager>().PlayMusic(Music);
     }
 
     private void Update()

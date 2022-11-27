@@ -5930,6 +5930,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad8236708c082b144a0eace53fd28fa9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Music: 3
   onScreenControls: {fileID: 0}
 --- !u!4 &2120068478
 Transform:
