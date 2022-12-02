@@ -5,8 +5,20 @@ using UnityEngine.SceneManagement;
 
 public class UIController : MonoBehaviour
 {
- public void OnRestartButton_Pressed()
+    public GameObject MiniMap;
+
+    private void Start()
+    {
+        MiniMap = GameObject.Find("MiniMap");
+    }
+
+    public void OnRestartButton_Pressed()
     {
         SceneManager.LoadScene("Main");
+    }
+
+    public void OnYButton_Pressed()
+    {
+        MiniMap.SetActive(!MiniMap.activeInHierarchy);
     }
 }
