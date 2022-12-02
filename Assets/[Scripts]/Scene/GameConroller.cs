@@ -6,6 +6,7 @@ public class GameConroller : MonoBehaviour
 {
     public Sound Music;
     public GameObject onScreenControls;
+    public GameObject miniMap;
 
     // Update is called once per frame
     void Awake()
@@ -16,6 +17,12 @@ public class GameConroller : MonoBehaviour
         onScreenControls.SetActive(Application.isMobilePlatform);
 
         FindObjectOfType<SoundManager>().PlayMusic(Music);
+
+        miniMap = GameObject.Find("MiniMap");
+        if (miniMap)
+        {
+            miniMap.SetActive(false);
+        }
     }
 
     private void Update()
@@ -24,5 +31,12 @@ public class GameConroller : MonoBehaviour
         {
             FindObjectOfType<HealthBarController>().TakeDamage(20);
         }
+
+        if (Input.GetKeyDown(KeyCode.M) && miniMap)
+        {
+            miniMap.SetActive(!miniMap.activeInHierarchy);
+        }
     }
+
+
 }
