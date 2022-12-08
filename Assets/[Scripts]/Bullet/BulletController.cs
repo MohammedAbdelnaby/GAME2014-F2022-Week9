@@ -39,8 +39,15 @@ public class BulletController : MonoBehaviour
     {
         if (gameObject.activeInHierarchy)
         {
-            Destroy(this.gameObject);
+            BulletManager.Instance().ReturnBullet(this.gameObject);
         }
+    }
+
+    public void ResetAllPhysics()
+    {
+        rigidbody2D.velocity = Vector2.zero;
+        rigidbody2D.angularVelocity = 0.0f;
+        direction = Vector2.zero;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -48,16 +55,16 @@ public class BulletController : MonoBehaviour
         switch (collision.gameObject.tag)
         {
             case "Player":
-                Destroy(this.gameObject);
+                DestroyYourself();
                 break;
             case "Ground":
-                Destroy(this.gameObject);
+                DestroyYourself();
                 break;
             case "Prop":
-                Destroy(this.gameObject);
+                DestroyYourself();
                 break;
             case "Platform":
-                Destroy(this.gameObject);
+                DestroyYourself();
                 break;
             default:
                 break;

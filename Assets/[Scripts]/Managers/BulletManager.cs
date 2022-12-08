@@ -63,8 +63,10 @@ public class BulletManager : MonoBehaviour
 
     public void ReturnBullet(GameObject bullet)
     {
+        bullet.GetComponent<BulletController>().ResetAllPhysics();
         bullet.SetActive(false);
         bulletPool.Enqueue(bullet);
+
     }
 
     public void DestroyPool()
