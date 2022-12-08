@@ -78,6 +78,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (life.value <= 0)
         {
+            BulletManager.Instance().DestroyPool();
             SceneManager.LoadScene("End");
         }
     }
@@ -196,6 +197,12 @@ public class PlayerMovement : MonoBehaviour
         if (collision.gameObject.CompareTag("Hazard"))
         {
             health.TakeDamage(30);
+            soundManager.PlaySoundFX(Sound.HURT, Channel.PLAYER_HURT_FX);
+            ShakeCamera();
+        }
+        if (collision.gameObject.CompareTag("Bullet"))
+        {
+            health.TakeDamage(10);
             soundManager.PlaySoundFX(Sound.HURT, Channel.PLAYER_HURT_FX);
             ShakeCamera();
         }

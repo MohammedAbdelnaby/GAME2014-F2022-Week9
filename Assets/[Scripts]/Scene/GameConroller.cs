@@ -23,6 +23,8 @@ public class GameConroller : MonoBehaviour
         {
             miniMap.SetActive(false);
         }
+
+        BulletManager.Instance().BuildBulletPool();
     }
 
     private void Update()
